@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Recharge Portal</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Secure recharge portal for mobile payments" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="card">
+        <h1>Recharge Portal</h1>
+        <form id="rechargeForm">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input 
+              type="text" 
+              id="name" 
+              value="Test User" 
+              required
+              autocomplete="name"
+              placeholder="Enter your name"
+            >
+          </div>
+          <div class="form-group">
+            <label for="mobile">Mobile Number:</label>
+            <input 
+              type="tel" 
+              id="mobile" 
+              value="8145344963" 
+              pattern="[0-9]{10}" 
+              required
+              autocomplete="tel"
+              placeholder="10-digit mobile number"
+              maxlength="10"
+            >
+          </div>
+          <div class="form-group">
+            <label for="amount">Amount (₹):</label>
+            <input 
+              type="number" 
+              id="amount" 
+              value="1" 
+              min="1" 
+              required
+              placeholder="Enter amount"
+            >
+          </div>
+          <button type="submit" class="submit-btn">Pay Now</button>
+        </form>
+        <div id="status" class="status"></div>
+        <div class="test-info">
+          <h3>Test Information:</h3>
+          <ul>
+            <li>Test Mobile: 8145344963</li>
+            <li>Test Amount: ₹1</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
